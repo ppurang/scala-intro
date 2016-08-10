@@ -8,7 +8,7 @@ import scalaz._, Scalaz._
 
 object SumSpecification extends Properties("Sum") {
 
-  val smallInteger = Gen.choose(-50,50)
+  val smallInteger = Gen.choose(-10000,10000)
 
   property("sum") = forAll(smallInteger, smallInteger) { (a: Int, b: Int) =>
     a < b ==> {
