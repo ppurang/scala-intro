@@ -13,8 +13,8 @@ object Main {
       val lauraG = Person("Laura", 18, Maybe.just("Scooter"))
       val anil = Person("Anil", 17, Maybe.just("McLaren"))
 
-      println(s"lauara =/= anil ${laura =/= anil}")
-      println(s"lauara === anil ${laura === anil}")
+      println(s"laura =/= anil ${laura =/= anil}")
+      println(s"laura === anil ${laura === anil}")
       println(s"laura === lauraG ${laura === lauraG}")
 
       val pm = Organization(List(laura))

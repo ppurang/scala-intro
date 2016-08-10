@@ -7,8 +7,8 @@ case class PersonException(msg: String) extends Exception
 
 case class Person(name: String,
                   age: Int,
-                  car: Maybe[String] = Maybe.empty
-                 )
+                  car: Maybe[String] = Maybe.empty)
+
 object Person {
   implicit val eq = Equal.equalA[Person]
 }
