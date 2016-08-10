@@ -22,8 +22,12 @@ object Sum {
     //http://stackoverflow.com/questions/3114142/what-is-the-scala-annotation-to-ensure-a-tail-recursive-function-is-optimized
     @tailrec def loop(lower: A, acc: A): A = {
       if (continue(lower)(upper)) {
+<<<<<<< Updated upstream
         val acc0: A = op(acc)(f(lower))
         loop(next(lower), acc0)
+=======
+        loop(next(lower), op(acc)(f(lower)))
+>>>>>>> Stashed changes
       } else {
         acc
       }
@@ -129,6 +133,32 @@ object TestSum {
     assert(Sum.sumAbstraction((0 to 10).toList, (x: Int) => x) === posCaseControl, s"positive case - $posCase === $posCaseControl")
 
 
+    println(Sum.sumII[Int, String](
+      0,
+      10,
+      _.toString,
+      x => y => x + y,
+      "",
+      _ + 1,
+      x => y => x <= y
+    ))
+
+
+    println(Sum.sumAbstraction((0 to 10).toList, (x:Int) => x.toString))
+
+    println(Sum.sumII[Char, Int](
+      'a',
+      'z',
+      _.toInt,
+      x => y => x + y,
+      0,
+      _.succ,
+      x => y => x <= y
+    ))
+
+
+    println(Sum.sumAbstraction(('a' to 'z').toList, (x:Char) => x.toInt))
+    
   }
 }
 
