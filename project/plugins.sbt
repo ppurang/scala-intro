@@ -1,0 +1,6 @@
+addSbtPlugin("io.spray" % "sbt-revolver" % "0.8.0")
+addSbtPlugin("com.typesafe.sbt" % "sbt-gzip" % "1.0.0")
+addSbtPlugin("com.typesafe.sbt" % "sbt-web" % "1.4.0")
+addSbtPlugin("com.eed3si9n" % "sbt-buildinfo" % "0.6.1")
+addSbtPlugin("org.wartremover" % "sbt-wartremover" % "1.0.1")
+addSbtPlugin("com.timushev.sbt" % "sbt-updates" % "0.1.10")

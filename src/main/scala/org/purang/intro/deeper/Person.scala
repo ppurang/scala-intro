@@ -10,10 +10,10 @@ case class Person(name: String,
                   car: Maybe[String] = Maybe.empty)
 
 object Person {
-  implicit val eq = Equal.equalA[Person]
+  implicit val eq : Equal[Person] = Equal.equalA
 }
 
 case class Organization(people: List[Person])
 object Organization {
-  implicit val eq = Equal.equalA[Organization]
+  implicit val eq : Equal[Organization] = Equal.equalA
 }
