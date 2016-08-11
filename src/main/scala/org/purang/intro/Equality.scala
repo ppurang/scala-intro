@@ -35,7 +35,7 @@ object Equality {
 }
 
 /**
-  * These operation(s) could lifted into already existing types to allow ease of use
+  * These operation(s) could be lifted into already existing types to allow ease of use
   * implicitly[Equality].equalz(a,b) turns to a === b
   */
 final class EqualityOps[A: Equality](val self: A) {
