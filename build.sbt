@@ -44,6 +44,6 @@ scalacOptions ++= Seq(
 scalacOptions in Test ++= Seq("-Yrangepos")
 
 
-wartremoverErrors in (Compile, compile) ++= Seq(Wart.Any, Wart.Equals, Wart.Any2StringAdd, Wart.ExplicitImplicitTypes, Wart.Option2Iterable, Wart.OptionPartial, Wart.Return, Wart.TryPartial, Wart.EitherProjectionPartial, Wart.Enumeration, Wart.ImplicitConversion, Wart.JavaConversions, Wart.LeakingSealed) //Wart.FinalCaseClass
+wartremoverErrors in (Compile, compile) ++= Seq(Wart.Any, Wart.Equals, Wart.Any2StringAdd, Wart.ExplicitImplicitTypes, Wart.Option2Iterable, Wart.OptionPartial, Wart.Return, Wart.TryPartial, Wart.EitherProjectionPartial, Wart.Enumeration,  Wart.JavaConversions, Wart.LeakingSealed) //Wart.FinalCaseClass ////Wart.ImplicitConversion,
 
 
