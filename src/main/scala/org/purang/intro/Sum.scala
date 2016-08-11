@@ -22,12 +22,7 @@ object Sum {
     //http://stackoverflow.com/questions/3114142/what-is-the-scala-annotation-to-ensure-a-tail-recursive-function-is-optimized
     @tailrec def loop(lower: A, acc: A): A = {
       if (continue(lower)(upper)) {
-<<<<<<< Updated upstream
-        val acc0: A = op(acc)(f(lower))
-        loop(next(lower), acc0)
-=======
         loop(next(lower), op(acc)(f(lower)))
->>>>>>> Stashed changes
       } else {
         acc
       }
