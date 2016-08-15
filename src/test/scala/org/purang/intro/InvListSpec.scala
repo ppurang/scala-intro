@@ -14,9 +14,7 @@ object InvListSpec extends Properties("InvList") {
 
   property("nth should be same as for a comparable list") = forAll(positiveInteger, smallInvLists) { (b:Int, a: List[Int]) => {
     val size = a.length
-    println(a.length)
     (b >= 0 && b < size) ==> {
-
       Maybe.just(a(b)) === InvList.fromList(a).nth(b).fold(x => Maybe.empty, Maybe.just)
     }
   }
